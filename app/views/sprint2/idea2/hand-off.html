@@ -1,0 +1,31 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      
+      <h1 class="govuk-heading-l">Create an identity account to continue</h1>
+
+      <p>To get New Style Jobseeker's Allowance (JSA) we need you to create an identity account.</p>
+
+      <p>You can do this after you apply but your claim will be delayed.</p>
+
+      <p>Once you have created an identity account you can use the same account to check and get your state pension.</p>
+
+        {{ govukButton({
+            text: "Continue",
+            href: "https://dth-prototype.herokuapp.com/auth/v8/register/start"
+        }) }}
+
+        <p><a href="claim-start">Continue without creating an identity account</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}

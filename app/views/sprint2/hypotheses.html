@@ -1,0 +1,145 @@
+
+{% set hypothesis1a %}
+
+    <h3 class='govuk-heading-s'>Hypothesis 1a – Citizen ID&V at the start of NS JSA service</h3>
+  {{ govukSummaryList({
+    rows: [
+        {
+            key: {
+                text: "We believe that"
+            },
+            value: {
+                text: "asking users to verify their identity at the start of the JSA digital service"
+            }
+        },
+        {
+            key: {
+                text: "for"
+            },
+            value: {
+                text: "citizens"
+            }
+        },
+        {
+            key: {
+                text: "will acheive"
+            },
+            value: {
+                html: "
+                <ul class='govuk-list govuk-list--bullet'>
+                  <li>no rekeyed personal information</li>
+                  <li>a reduction in the number of questions asked in our digital service</li>
+                </ul>
+                "
+            }
+        },
+        {
+            key: {
+                text: "validated by"
+            },
+            value: {
+                text: "user research and prototype testing"
+            }
+        }
+    ]
+    }) }}
+  {% endset %}
+
+
+{% set hypothesis1b %}
+
+    <h3 class='govuk-heading-s'>Hypothesis 1b – Citizen ID&V at the end of NS JSA service</h3>
+  {{ govukSummaryList({
+    rows: [
+        {
+            key: {
+                text: "We believe that"
+            },
+            value: {
+                text: "asking users to verify their identity at the end of the JSA digital service"
+            }
+        },
+        {
+            key: {
+                text: "for"
+            },
+            value: {
+                text: "citizens"
+            }
+        },
+        {
+            key: {
+                text: "will acheive"
+            },
+            value: {
+                html: "
+                <p>a higher IDV success rate because users who get through the application will have more motivation to complete it
+                "
+            }
+        },
+        {
+            key: {
+                text: "validated by"
+            },
+            value: {
+                text: "user research and prototype testing"
+            }
+        }
+    ]
+    }) }}
+  {% endset %}
+
+
+{% set hypothesis2 %}
+
+    <h3 class='govuk-heading-s'>Hypothesis 2 – Citizen ID&V verification exception</h3>
+  {{ govukSummaryList({
+    rows: [
+        {
+            key: {
+                text: "We believe that"
+            },
+            value: {
+                text: "informaing users thier details are not matched"
+            }
+        },
+        {
+            key: {
+                text: "will acheive"
+            },
+            value: {
+                html: "
+                <p>a positive way to continue to apply for JSA for users of the digital service
+                "
+            }
+        },
+        {
+            key: {
+                text: "validated by"
+            },
+            value: {
+                text: "user research and prototype testing"
+            }
+        }
+    ]
+    }) }}
+  {% endset %}
+
+{#            <ul class='govuk-list govuk-list--bullet'>
+                  <li>a reduction in re-keying information and provide users with all the information they need in one place</li>
+                  <li>the ability to capture conversations about the claim</li>
+                </ul> #}
+{{ govukDetails({
+    summaryText: "View hypotheses 1a",
+    html: hypothesis1a
+}) }}
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+{{ govukDetails({
+    summaryText: "View hypotheses 1b",
+    html: hypothesis1b
+}) }}
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+{{ govukDetails({
+    summaryText: "View hypotheses 2",
+    html: hypothesis2
+}) }}

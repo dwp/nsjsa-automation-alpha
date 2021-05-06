@@ -1,0 +1,42 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      
+      <h1 class="govuk-heading-l">
+        Sprint #2 – ID&V
+        <span class="govuk-caption-m">May 5 to May 14</span>
+      </h1>
+
+      {% include 'sprint2/hypotheses.html' %}
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Hand-off at the start</h2>
+      <ul class="govuk-list govuk-list--bullet">
+          <li><a href='sprint2/idea1/eligible'>Citizen ID&V after eligibility, minimal hand-off</a></li>
+          <li><a href='sprint2/idea2/eligible'>Citizen ID&V after eligibility, account reuse</a></li>
+      </ul>
+
+      <h2 class="govuk-heading-m">Handle IDV exception</h2>
+      <ul class="govuk-list govuk-list--bullet">
+          <li><a href='sprint2/idea3/exception'>Citizen ID&V exception</a></li>
+      </ul>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Hand-off at the end</h2>
+      <ul class="govuk-list govuk-list--bullet">
+          <li><a href='sprint2/idea3/eligible'>Citizen ID&V after eligibility, minimal hand-off</a></li>
+      </ul>
+
+    </div>
+  </div>
+
+{% endblock %}

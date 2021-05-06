@@ -1,0 +1,52 @@
+
+{% set sprint1Summary %}
+
+    <h3 class='govuk-heading-s'>Hypothesis – Citizen ID&V</h3>
+  {{ govukSummaryList({
+    rows: [
+        {
+            key: {
+                text: "We believe that"
+            },
+            value: {
+                text: "?"
+            }
+        },
+        {
+            key: {
+                text: "for"
+            },
+            value: {
+                text: "?"
+            }
+        },
+        {
+            key: {
+                text: "will acheive"
+            },
+            value: {
+                html: "
+                ?
+                "
+            }
+        },
+        {
+            key: {
+                text: "validated by"
+            },
+            value: {
+                text: "?"
+            }
+        }
+    ]
+    }) }}
+  {% endset %}
+
+{#            <ul class='govuk-list govuk-list--bullet'>
+                  <li>a reduction in re-keying information and provide users with all the information they need in one place</li>
+                  <li>the ability to capture conversations about the claim</li>
+                </ul> #}
+{{ govukDetails({
+    summaryText: "View team design hypotheses",
+    html: sprint1Summary
+}) }}
