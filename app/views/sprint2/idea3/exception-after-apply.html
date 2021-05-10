@@ -1,0 +1,38 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      
+      <h1 class="govuk-heading-l">We couldn’t verify your identity</h1>
+
+      {# <p>We tried to find you with the identity details you provided.</p> #}
+
+      <p>This could be because:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>we have out-dated information</li>
+        <li>you have moved house</li>
+        <li>your name has changed</li>
+        {# <li>your employer hasn't updated your details</li> #}
+      </ul>
+
+      <h2 class="govuk-heading-m">What happens next?</h2>
+
+      <p>We'll verify your identity over the phone.</p>
+
+        {{ govukButton({
+            text: "Continue",
+            href: "claim-start"
+        }) }}
+        <p><a href="hand-off">You can retry with different details</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}
