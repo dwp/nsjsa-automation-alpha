@@ -1,0 +1,101 @@
+
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+<div class="govuk-grid-column-two-thirds">
+
+            <form action="enter-address" method="POST" novalidate="">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-xl">Personal details</span>
+                            Where should we send letters about your claim?
+                        </h1>
+                    </legend>
+                    
+                    <div class="govuk-form-group">
+
+    <label class="govuk-label" data-uipath="buildingAndStreet.label" for="buildingAndStreet">
+        Building and street
+        <span class="govuk-visually-hidden">line 1 of 2</span>
+    </label>
+
+    
+
+    
+
+    <input class="govuk-input" id="buildingAndStreet" name="buildingAndStreet" type="text" value="">
+
+</div> 
+
+                    <div class="govuk-form-group">
+
+    <label class="govuk-label" data-uipath="optionalAddress.label" for="optionalAddress">
+        
+        <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+    </label>
+
+    
+
+    
+
+    <input class="govuk-input" data-uipath="optionalAddress.field" id="optionalAddress" name="optionalAddress" type="text" data-hj-suppress="" value="" data-orig-value="">
+
+</div>
+
+                    <div class="govuk-form-group">
+
+    <label class="govuk-label" data-uipath="townOrCity.label" for="townOrCity">Town or city</label>
+
+    
+
+    
+
+    <input class="govuk-input govuk-!-width-two-thirds" data-uipath="townOrCity.field" id="townOrCity" name="townOrCity" type="text" data-hj-suppress="" value="" data-orig-value="">
+</div>
+
+                    <div class="govuk-form-group">
+
+    <label class="govuk-label" data-uipath="postcode.label" for="postcode">Postcode</label>
+
+    
+
+    
+
+    <input class="govuk-input govuk-input--width-10" data-uipath="postcode.field" id="postcode" name="postcode" type="text" data-hj-suppress="" value="ST17 0LS" data-orig-value="ST17 0LS">
+</div>
+
+                </fieldset>
+
+                
+
+                {{ govukButton({
+                    text: "Continue",
+                    href: "add-postal-address"
+                }) }}
+    
+
+
+            </form>
+
+        </div>
+
+  </div>
+
+{% endblock %}

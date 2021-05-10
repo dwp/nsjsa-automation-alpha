@@ -21,4 +21,6 @@ module.exports = {
 
   // Insert values here
 
+  "idvHandOffURL": "https://dth-prototype.herokuapp.com/auth/v8/register/start?service-name=Apply for New Style Jobseeker’s Allowance"
+
 }

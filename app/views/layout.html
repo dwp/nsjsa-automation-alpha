@@ -47,6 +47,14 @@
     serviceUrl: "/",
     containerClasses: "govuk-width-container"
   }) }}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "concept"
+    },
+    classes: "govuk-width-container",
+    html: 'This is a concept not a government service'
+  }) }}
 {% endblock %}
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}

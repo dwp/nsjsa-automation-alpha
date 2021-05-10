@@ -1,0 +1,90 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        <span class="govuk-caption-xl">Personal details</span>
+        Do you want to add a different address for your post?
+      </h1>
+
+      <form action="add-postal-address" method="post">
+
+        
+
+
+
+
+
+  
+
+  
+<div class="govuk-form-group">
+
+  <div class="govuk-radios govuk-radios--inline">
+    
+      
+          
+        
+        
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="details-add-different-postal-address" name="detailsAddDifferentPostalAddress" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="details-add-different-postal-address">
+        Yes
+      </label>
+          
+        </div>
+        
+        
+      
+    
+      
+        
+        
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="details-add-different-postal-address-2" name="detailsAddDifferentPostalAddress" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="details-add-different-postal-address-2">
+        No
+      </label>
+          
+        </div>
+        
+        
+      
+    
+  </div>
+
+</div>
+
+
+        
+
+  
+    
+  
+
+<button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

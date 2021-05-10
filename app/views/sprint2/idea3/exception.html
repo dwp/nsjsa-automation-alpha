@@ -10,7 +10,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
       
-      <h1 class="govuk-heading-l">We weren't able to verify your identity</h1>
+      <h1 class="govuk-heading-l">We couldn’t verify your identity</h1>
 
       {# <p>We tried to find you with the identity details you provided.</p> #}
 
@@ -24,14 +24,13 @@
 
       <h2 class="govuk-heading-m">What happens next?</h2>
 
-      <p>You can continue to apply for New Style Jobseeker's Allowance (JSA) and we'll verify your identity another way later.</p>
+      <p>You can continue to apply for {{ serviceName }} and we'll verify your identity another way later.</p>
 
         {{ govukButton({
             text: "Continue",
             href: "claim-start"
         }) }}
-
-        <p><a href="https://dth-prototype.herokuapp.com/auth/v8/register/start">You can retry with different details</a></p>
+        <p><a href="hand-off">You can retry with different details</a></p>
 
     </div>
   </div>

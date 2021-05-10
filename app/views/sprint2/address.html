@@ -1,0 +1,104 @@
+
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+<div class="govuk-grid-column-two-thirds">
+
+            <h1 class="govuk-heading-l">
+                <span class="govuk-caption-xl">Personal details</span>
+                Select your address
+            </h1>
+
+            <form action="/select-address" method="post" novalidate=""><input type="hidden" name="_csrf" value="07c0aa5d-c203-4f5c-a7ac-a7f59c56575c" data-orig-value="07c0aa5d-c203-4f5c-a7ac-a7f59c56575c">
+                <p class="govuk-body">
+                    <span>Showing addresses for postcode</span>
+                    <strong>ST17 0LS</strong><span>.</span>
+                </p>
+
+                <div class="govuk-form-group">
+                    <div class="full-width-form-control-wrapper">
+                        <label id="address-label" class="govuk-label" for="address">Select your address</label>
+                        
+
+                        <select class="govuk-select" aria-labelledby="address-label" id="address" name="address" data-orig-value="">
+                            <option value="">Select your address</option>
+                            <option value="1 Old Croft Road, Stafford, ST17 0LS">1 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="2 Old Croft Road, Stafford, ST17 0LS">2 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="3 Old Croft Road, Stafford, ST17 0LS">3 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="4 Old Croft Road, Stafford, ST17 0LS">4 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="5 Old Croft Road, Stafford, ST17 0LS">5 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="6 Old Croft Road, Stafford, ST17 0LS">6 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="7 Old Croft Road, Stafford, ST17 0LS">7 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="8 Old Croft Road, Stafford, ST17 0LS">8 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="9 Old Croft Road, Stafford, ST17 0LS">9 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="10 Old Croft Road, Stafford, ST17 0LS">10 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="11 Old Croft Road, Stafford, ST17 0LS">11 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="11a Old Croft Road, Stafford, ST17 0LS">11a Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="12 Old Croft Road, Stafford, ST17 0LS">12 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="13 Old Croft Road, Stafford, ST17 0LS">13 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="14 Old Croft Road, Stafford, ST17 0LS">14 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="15 Old Croft Road, Stafford, ST17 0LS">15 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="16 Old Croft Road, Stafford, ST17 0LS">16 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="17 Old Croft Road, Stafford, ST17 0LS">17 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="18 Old Croft Road, Stafford, ST17 0LS">18 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="19 Old Croft Road, Stafford, ST17 0LS">19 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="20 Old Croft Road, Stafford, ST17 0LS">20 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="21 Old Croft Road, Stafford, ST17 0LS">21 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="22 Old Croft Road, Stafford, ST17 0LS">22 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="23 Old Croft Road, Stafford, ST17 0LS">23 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="24 Old Croft Road, Stafford, ST17 0LS">24 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="25 Old Croft Road, Stafford, ST17 0LS">25 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="26 Old Croft Road, Stafford, ST17 0LS">26 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="27 Old Croft Road, Stafford, ST17 0LS">27 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="28 Old Croft Road, Stafford, ST17 0LS">28 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="29 Old Croft Road, Stafford, ST17 0LS">29 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="30 Old Croft Road, Stafford, ST17 0LS">30 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="31 Old Croft Road, Stafford, ST17 0LS">31 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="32 Old Croft Road, Stafford, ST17 0LS">32 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="33 Old Croft Road, Stafford, ST17 0LS">33 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="34 Old Croft Road, Stafford, ST17 0LS">34 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="35 Old Croft Road, Stafford, ST17 0LS">35 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="36 Old Croft Road, Stafford, ST17 0LS">36 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="38 Old Croft Road, Stafford, ST17 0LS">38 Old Croft Road, Stafford, ST17 0LS</option>
+                            <option value="Beginner to Advanced Guitar Tuition, 8 Old Croft Road, Stafford, ST17 0LS">Beginner to Advanced Guitar Tuition, 8 Old Croft Road, Stafford, ST17 0LS</option>
+                        </select>
+                    </div>
+                </div>
+
+                <p class="govuk-body">
+                    <span>Address not shown?</span>
+
+                    <a href="enter-address">
+                        <span>Enter your address manually</span>
+                    </a>
+                </p>
+
+                {{ govukButton({
+                    text: "Continue",
+                    href: "add-postal-address"
+                }) }}
+
+        
+    
+
+            </form>
+        </div>
+  </div>
+
+{% endblock %}
