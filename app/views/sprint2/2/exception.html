@@ -1,0 +1,45 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Continue your application</h1>
+
+      {% if data['exception'] == 'continue' %}
+
+    <p>We couldn’t confirm your identity online, we’ll contact you to confirm your identity after you apply for New Style JSA.</p>
+    <p>You can still complete your application online.</p>
+
+      {% elif data['exception'] == 'reasons' %}
+
+      <p>We couldn’t confirm your identity online, this could be because:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>we have out-dated information</li>
+          <li>you have moved house</li>
+          <li>your name has changed</li>
+        </ul>
+
+         <h2 class="govuk-heading-m">What happens next?</h2>
+        <p>You can still complete your application online.</p>
+        <p>We’ll contact you to confirm your identity after you apply for New Style JSA.</p>
+
+      {% endif %}
+
+
+      {{ govukButton({
+          text: "Continue application",
+          href: "claim-start"
+      }) }}
+      <p><a href="hand-off">You can try confirming your identity again</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      
+      <h1 class="govuk-heading-l">Confirm your identity</h1>
+
+      <p>Confirming your identity:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>checks thats it's really you making a claim</li>
+        <li>saves you time later</li>
+      </ul>
+
+      <p>If you already have an account you can use it, otherwise you will create a new one.</p>
+
+        {{ govukButton({
+            text: "Confirm my identity online",
+            href: data['idvHandOffURL']
+        }) }}
+        
+      {% set confirmIDHTML %}
+        <p>It will not affect your claim if you try to confirm your identity online but find you cannot do this.</p>
+        <p>We can contact you about other ways of confirming your identity. However, it might take longer to process your claim.</p>
+        <p><a href="confirmation?id=not-verified">I want to confirm my identity another way</a></p>
+      {% endset %}
+
+      {{ govukDetails({
+        summaryText: "If you want to confirm you identity another way",
+        html: confirmIDHTML
+      }) }}
+
+    </div>
+  </div>
+
+{% endblock %}

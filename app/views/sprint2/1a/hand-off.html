@@ -1,0 +1,58 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      
+      {% if data['hand-off'] == 'trust-hub' %}
+
+        <h1 class="govuk-heading-l">Prove your identity to continue</h1>
+
+        <p>To get New Style Jobseeker's Allowance (JSA) we need to check your identity.</p>
+
+        <p>You can do this after you apply but your claim will be delayed.</p>
+
+          {{ govukButton({
+              text: "Continue",
+              href: data['idvHandOffURL']
+          }) }}
+
+          <p><a href="claim-start">Continue without proving your identity</a></p>
+
+        {% else %}
+
+          <h1 class="govuk-heading-l">Create an identity account to continue</h1>
+
+          <p>To get New Style Jobseeker's Allowance (JSA) we need you to create an identity account.</p>
+
+          <p>You can do this after you apply but your claim will be delayed.</p>
+
+          <p>Once you have created an identity account you can use the same account to check and get your state pension.</p>
+
+            {{ govukButton({
+                text: "Continue",
+                href: data['idvHandOffURL']
+            }) }}
+
+          <p><a href="claim-start">Continue without creating an identity account</a></p>
+            
+        {% endif %}
+
+    </div>
+  </div>
+
+{% endblock %}

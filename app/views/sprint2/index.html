@@ -15,33 +15,237 @@
         <span class="govuk-caption-m">May 5 to May 14</span>
       </h1>
 
-      {% include 'sprint2/hypotheses.html' %}
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-      <h2 class="govuk-heading-m">Verify ID after application</h2>
+      <h2 class="govuk-heading-m">1a. Start – How might we hand-off to the identity service at the start of NSJSA application?</h2>
+
+{% set hypothesis1a %}
+
+  {{ govukSummaryList({
+    rows: [
+        {
+            key: {
+                text: "We believe that"
+            },
+            value: {
+                text: "asking users to verify their identity at the start of the JSA digital service"
+            }
+        },
+        {
+            key: {
+                text: "for"
+            },
+            value: {
+                text: "citizens"
+            }
+        },
+        {
+            key: {
+                text: "will acheive"
+            },
+            value: {
+                html: "
+                <ul class='govuk-list govuk-list--bullet'>
+                  <li>no rekeyed personal information</li>
+                  <li>a reduction in the number of questions asked in our digital service</li>
+                </ul>
+                "
+            }
+        },
+        {
+            key: {
+                text: "validated by"
+            },
+            value: {
+                text: "user research and prototype testing"
+            }
+        }
+    ]
+    }) }}
+  {% endset %}
+
+      {{ govukDetails({
+        summaryText: "View hypotheses 1a",
+        html: hypothesis1a
+      }) }}
+
       <ul class="govuk-list govuk-list--bullet">
-          <li><a href='sprint2/after-apply/verify-id-email'>Email to verify ID</a></li>
+          <li><a href='sprint2/1a/eligible?hand-off=choose'>Choose a way to create an account</a></li>
+          <li><a href='sprint2/1a/eligible?hand-off=trust-hub'>Hand off to trust hub only</a></li>
+          <li><a href='sprint2/1a/eligible?hand-off=reuse'>Hand off to trust hub only, describe account reuse</a></li>
       </ul>
 
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <h2 class="govuk-heading-m">1b. End – How might we hand-off to the identity service at the end of NSJSA application?</h2>
 
-      <h2 class="govuk-heading-m">Hand-off at the start</h2>
+{% set hypothesis1b %}
+
+  {{ govukSummaryList({
+    rows: [
+        {
+            key: {
+                text: "We believe that"
+            },
+            value: {
+                text: "asking users to verify their identity at the end of the JSA digital service"
+            }
+        },
+        {
+            key: {
+                text: "for"
+            },
+            value: {
+                text: "citizens"
+            }
+        },
+        {
+            key: {
+                text: "will acheive"
+            },
+            value: {
+                html: "
+                <p>a higher IDV success rate because users who get through the application 
+                will have more motivation to complete it.</p>
+                "
+            }
+        },
+        {
+            key: {
+                text: "validated by"
+            },
+            value: {
+                text: "user research and prototype testing"
+            }
+        }
+    ]
+    }) }}
+  {% endset %}
+
+      {{ govukDetails({
+        summaryText: "View hypotheses 1b",
+        html: hypothesis1b
+      }) }}
+
       <ul class="govuk-list govuk-list--bullet">
-          <li><a href='sprint2/choice'>Choose a way to create an account</a></li>
-          <li><a href='sprint2/idea1/eligible'>Hand off to trust hub only</a></li>
-          <li><a href='sprint2/idea2/eligible'>Hand off to trust hub only, describe account reuse</a></li>
+        <li><a href='sprint2/1b/declaration?exception=continue'>After the main application questions and submission</a></li>
       </ul>
 
-      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-      <h2 class="govuk-heading-m">Handle exception</h2>
-      <ul class="govuk-list govuk-list--bullet">
-          <li><a href='sprint2/idea3/exception'>Failed verification during application</a></li>
-          <li><a href='sprint2/idea3/exception-after-apply'>Failed verification after application</a></li>
+   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+  <h2 class="govuk-heading-m">1c. After – How might we hand-off to the identity service after the NSJSA application?</h2>
+
+{% set hypothesis1c %}
+
+  {{ govukSummaryList({
+    rows: [
+        {
+            key: {
+                text: "We believe that"
+            },
+            value: {
+                text: "asking users to verify their identity after the submit application of the JSA digital service"
+            }
+        },
+        {
+            key: {
+                text: "for"
+            },
+            value: {
+                text: "citizens"
+            }
+        },
+        {
+            key: {
+                text: "will acheive"
+            },
+            value: {
+                html: "
+                <p>a higher IDV success rate because users who get through the application will 
+                have more motivation to complete it and it will cause less friction in their journey.</p>
+                "
+            }
+        },
+        {
+            key: {
+                text: "validated by"
+            },
+            value: {
+                text: "user research and prototype testing"
+            }
+        }
+    ]
+    }) }}
+  {% endset %}
+  
+      {{ govukDetails({
+        summaryText: "View hypotheses 1c",
+        html: hypothesis1c
+      }) }}
+
+        <ul class="govuk-list govuk-list--bullet">
+            
+          <li><a href='sprint2/1c/verify-id-email'>Email to verify ID</a></li>
       </ul>
 
-      
+       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
+      <h2 class="govuk-heading-m">2. Fail – How might we handle a failed IDV?</h2>
 
+{% set hypothesis2 %}
+
+  {{ govukSummaryList({
+    rows: [
+        {
+            key: {
+                text: "We believe that"
+            },
+            value: {
+                text: "informing users thier details are not matched"
+            }
+        },
+        {
+            key: {
+                text: "will acheive"
+            },
+            value: {
+                html: "
+                <p>a positive way to continue to apply for JSA for users of the digital service.</p>
+                "
+            }
+        },
+        {
+            key: {
+                text: "validated by"
+            },
+            value: {
+                text: "user research and prototype testing"
+            }
+        }
+    ]
+    }) }}
+  {% endset %}
+
+      {{ govukDetails({
+        summaryText: "View hypotheses 2",
+        html: hypothesis2
+      }) }}
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href='sprint2/2/exception?exception=continue'>Positive failed verification</a></li>
+        <li><a href='sprint2/2/exception?exception=reasons'>Positive failed verification with reasons</a></li>
+        <li><a href="sprint2/1b/confirmation?id=not-verified">Confirmation page message</a></li>
+      </ul>
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <h2 class="govuk-heading-m">3. Success – How might we handle a successful IDV?</h2>
+
+      <p>No need to tell users its a success just let them continue the journey and get done what they need to.</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href='sprint2/2/exception?exception=reasons'>Pass with low level of confidence – treat as fail</a></li>
+        <li><a href='sprint2/3/check-details'>Pass with medium level of confidence – check address details</a></li>
+        <li><a href='sprint2/3-1/address'>Pass with medium level of confidence – auto look up address details</a></li>
+      </ul>
 
       {# <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
@@ -58,6 +262,10 @@
           <li><a href='sprint2/address'>Capture address based on post code from IDV</a></li>
       </ul> #}
 
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      {% include "includes/acronyms.html" %}
     </div>
   </div>
 
