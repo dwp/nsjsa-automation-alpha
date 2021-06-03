@@ -1,0 +1,87 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      
+      <h1 class="govuk-heading-l">
+        Sprint #4 – ID&V
+        <span class="govuk-caption-m">June 2 to June 15</span>
+      </h1>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">1. How might we ask users to verify their identity without rekeying their information?</h2>
+
+{% set hypothesis1 %}
+
+  {{ govukSummaryList({
+    rows: [
+        {
+            key: {
+                text: "We believe that"
+            },
+            value: {
+                text: "asking users to verify their identity at the start (after eligibility questions) 
+                without having to rekeyedthe same information in their application"
+            }
+        },
+        {
+            key: {
+                text: "for"
+            },
+            value: {
+                text: "citizens"
+            }
+        },
+        {
+            key: {
+                text: "will acheive"
+            },
+            value: {
+                text: "No change in satisfaction of the NSJSA application."
+            }
+        },
+        {
+            key: {
+                text: "we will know this when"
+            },
+            value: {
+                text: "we test a prototype of DTH and NSJSA where we pre-populate the first few similar questions"
+            }
+        },
+        {
+            key: {
+                text: "research type"
+            },
+            value: {
+                text: "qualitative"
+            }
+        }
+    ]
+    }) }}
+  {% endset %}
+
+      {{ govukDetails({
+        summaryText: "View hypotheses 1",
+        html: hypothesis1
+      }) }}
+
+      <ul class="govuk-list govuk-list--bullet">
+          <li><a href='sprint4/1/1-eligibility/introduction'>Start from eligibility</a></li>
+      </ul>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      {% include "includes/acronyms.html" %}
+    </div>
+  </div>
+
+{% endblock %}

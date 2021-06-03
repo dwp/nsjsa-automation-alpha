@@ -1,0 +1,85 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      
+      <h1 class="govuk-heading-l">
+        Sprint #3 – Handle complexity
+        <span class="govuk-caption-m">May s to May s</span>
+      </h1>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">1a. </h2>
+
+{% set hypothesis1a %}
+
+  {{ govukSummaryList({
+    rows: [
+        {
+            key: {
+                text: "We believe that"
+            },
+            value: {
+                text: "asking users to verify their identity at the start of the JSA digital service"
+            }
+        },
+        {
+            key: {
+                text: "for"
+            },
+            value: {
+                text: "citizens"
+            }
+        },
+        {
+            key: {
+                text: "will acheive"
+            },
+            value: {
+                html: "
+                <ul class='govuk-list govuk-list--bullet'>
+                  <li>no rekeyed personal information</li>
+                  <li>a reduction in the number of questions asked in our digital service</li>
+                </ul>
+                "
+            }
+        },
+        {
+            key: {
+                text: "validated by"
+            },
+            value: {
+                text: "user research and prototype testing"
+            }
+        }
+    ]
+    }) }}
+  {% endset %}
+
+      {{ govukDetails({
+        summaryText: "View hypotheses 1a",
+        html: hypothesis1a
+      }) }}
+
+      <ul class="govuk-list govuk-list--bullet">
+          <li><a href='sprint3/scenarios/backdating'>Back dating</a></li>
+      </ul>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+ 
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      {% include "includes/acronyms.html" %}
+    </div>
+  </div>
+
+{% endblock %}
