@@ -11,7 +11,7 @@
   <div class="govuk-grid-column-two-thirds">
       
       <h1 class="govuk-heading-l">
-        Sprint #4 – ID&V
+        Sprint #4 – ID&V (round 2)
         <span class="govuk-caption-m">June 2 to June 15</span>
       </h1>
 
@@ -75,6 +75,68 @@
 
       <ul class="govuk-list govuk-list--bullet">
           <li><a href='sprint4/1/1-eligibility/introduction'>Start from eligibility</a></li>
+      </ul>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">2. How might we ask users to verify their identity without creating a trust account?</h2>
+
+
+{% set hypothesis2 %}
+
+  {{ govukSummaryList({
+    rows: [
+        {
+            key: {
+                text: "We believe that"
+            },
+            value: {
+                text: "asking users to verify their identity without having to create a trust account"
+            }
+        },
+        {
+            key: {
+                text: "for"
+            },
+            value: {
+                text: "citizens"
+            }
+        },
+        {
+            key: {
+                text: "will acheive"
+            },
+            value: {
+                text: "A frictionless journey and a lower risk to lose citizens in the NSJSA application."
+            }
+        },
+        {
+            key: {
+                text: "we will know this when"
+            },
+            value: {
+                text: "we test 2 versions of the DTH prototype, with and without registration"
+            }
+        },
+        {
+            key: {
+                text: "research type"
+            },
+            value: {
+                text: "qualitative"
+            }
+        }
+    ]
+    }) }}
+  {% endset %}
+
+    {{ govukDetails({
+        summaryText: "View hypotheses 2",
+        html: hypothesis2
+      }) }}
+
+      <ul class="govuk-list govuk-list--bullet">
+          <li><a href='sprint4/2/1-eligibility/introduction'>Start from eligibility</a></li>
       </ul>
 
     </div>
