@@ -1,0 +1,123 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  DWP - Jobseeker&rsquo;s Allowance  
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<h1 class="govuk-heading-l">
+      <span class="govuk-caption-xl">Personal details</span>Check your contact information
+    </h1>
+
+    <p class="govuk-body-l">We will use this information to contact you about your claim.</p>
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Name"
+      },
+      value: {
+        text: data['first-name'] + " " + data['last-name']
+      }
+    },
+    {
+      key: {
+        text: "Date of birth"
+      },
+      value: {
+        text: data['dob-day'] + "/" + data['dob-month'] + "/" + data['dob-year']
+      }
+    },
+    {
+      key: {
+        text: "Address"
+      },
+      value: {
+        text: "32 Madeupis Road, Madeupistown. MD10 0UP"
+      },
+      actions: {
+        items: [
+          {
+            href: "address",
+            text: "Change",
+            visuallyHiddenText: "name"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Phone"
+      },
+      value: {
+        text: data['register-mobile-number']
+      },
+      actions: {
+        items: [
+          {
+            href: "contact-phone",
+            text: "Change",
+            visuallyHiddenText: "name"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Email address"
+      },
+      value: {
+        text: data['register-email-address']
+      },
+      actions: {
+        items: [
+          {
+            href: "contact-email",
+            text: "Change",
+            visuallyHiddenText: "name"
+          }
+        ]
+      }
+    }
+  ]
+}) }}
+
+      <form action="check-info" method="post">
+        
+        {{ govukRadios({
+          idPrefix: "use-info",
+          name: "use-info",
+          fieldset: {
+            legend: {
+              text: "Do you want us to use this information to contact you about your claim?",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+            text: "Continue"
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
