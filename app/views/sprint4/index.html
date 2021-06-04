@@ -29,7 +29,7 @@
             },
             value: {
                 text: "asking users to verify their identity at the start (after eligibility questions) 
-                without having to rekeyedthe same information in their application"
+                without having to rekey the same information in their application"
             }
         },
         {
@@ -72,9 +72,20 @@
         summaryText: "View hypotheses 1",
         html: hypothesis1
       }) }}
-
+      
+      <h3 class="govuk-heading-s">Persist data – pre-populate data</h3>
+      <p>This is a full IDV journey from NSJSA to DTH and back into NSJSA with pre-populated 
+      fields where applicable and up to claim start date.</p>
       <ul class="govuk-list govuk-list--bullet">
-          <li><a href='sprint4/1/1-eligibility/introduction'>Start from eligibility</a></li>
+          <li><a href='sprint4/hypothesis1/v1/1-eligibility/introduction'>Start from eligibility</a></li>
+          <li><a href='sprint4/hypothesis1/v1/dth'>Start from register trust account</a></li>
+      </ul>
+
+      <h3 class="govuk-heading-s">Persist data – data checks</h3>
+      <p>This is a full IDV journey from NSJSA to DTH and back into NSJSA with data checks
+       where applicable and up to claim start date.</p>
+      <ul class="govuk-list govuk-list--bullet">
+          <li><a href='sprint4/hypothesis1/v1/1-eligibility/introduction'>Start from eligibility</a></li>
       </ul>
 
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
@@ -135,9 +146,80 @@
         html: hypothesis2
       }) }}
 
+      <h3 class="govuk-heading-s">Hand-off at start</h3>
+      <p>Non-registration IDV journey back into our service up to claim start date.</p>
       <ul class="govuk-list govuk-list--bullet">
-          <li><a href='sprint4/2/1-eligibility/introduction'>Start from eligibility</a></li>
+          <li><a href='sprint4/hypothesis2/v1/1-eligibility/introduction'>Start journey from eligibility</a></li>
+          <li><a href='sprint4/hypothesis2/v1/dth'>Start journey from verify ID</a></li>
       </ul>
+
+      <h3 class="govuk-heading-s">Hand-off at end</h3>
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href='sprint4/hypothesis2/v1/declaration'>Start journey from declaration</a> - WIP</li>
+        </ul>
+
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">3. How might we inform agents of a failed IDV?</h2>
+
+
+{% set hypothesis3 %}
+
+  {{ govukSummaryList({
+    rows: [
+        {
+            key: {
+                text: "We believe that"
+            },
+            value: {
+                text: "informing of an identity not being verified online and flagging where a citizen might have a CIS mismatch"
+            }
+        },
+        {
+            key: {
+                text: "for"
+            },
+            value: {
+                text: "agents"
+            }
+        },
+        {
+            key: {
+                text: "will acheive"
+            },
+            value: {
+                text: "quicker identification of claims that need bio checks and faster processing of bio checks"
+            }
+        },
+        {
+            key: {
+                text: "we will know this when"
+            },
+            value: {
+                text: "we test a few IDV drop-off scenarios to see if there are tasks agents no longer need to do"
+            }
+        },
+        {
+            key: {
+                text: "research type"
+            },
+            value: {
+                text: "qualitative and quantitative"
+            }
+        }
+    ]
+    }) }}
+  {% endset %}
+
+    {{ govukDetails({
+        summaryText: "View hypotheses 3",
+        html: hypothesis3
+      }) }}
+
+      <p><a href="https://newstylejsa-admin.herokuapp.com/future-team/idv">View prototype</a></p>
+      <p>Used agent prototype for this as it contained all required components and data.</p>
+      <p>U: jsa P: jsa</p>
 
     </div>
 
