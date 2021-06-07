@@ -26,19 +26,14 @@ router.post('/address', function (req, res) {
   var currentYear = new Date().getFullYear();
 
   if (currentYear - dobYear < 16) {
-    // res.redirect('/v1_4-citizen/3-details/dob?under16');
     res.redirect(`${ABS_BASE_PATH}/dob?under16`);
   } else if (currentYear - dobYear > 64) {
-    // res.redirect('/v1_4-citizen/3-details/dob?over64');
     res.redirect(`${ABS_BASE_PATH}/dob?over64`);
   } else if (currentYear - dobYear === 16) {
-    // res.redirect('/v1_4-citizen/3-details/under18');
     res.redirect(`${ABS_BASE_PATH}/under18`);
   } else if (currentYear - dobYear === 17) {
-    // res.redirect('/v1_4-citizen/3-details/under18');
     res.redirect(`${ABS_BASE_PATH}/under18`);
   } else {
-    // res.redirect('/v1_4-citizen/3-details/address');
     res.redirect(`${ABS_BASE_PATH}/address`);
   }
 });

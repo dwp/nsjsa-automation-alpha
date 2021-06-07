@@ -4,7 +4,7 @@ var router = express.Router()
 
 const BASE_PATH = 'sprint4/hypothesis2/v2/dth';
 const ABS_BASE_PATH = `/${BASE_PATH}`;
-const NEXT_PATH = '/sprint4/hypothesis2/v2/3-details';
+const NEXT_PATH = '/sprint4/hypothesis2/v2/exception';
 
 router.get('/', function (req, res) {
   res.redirect(`${ABS_BASE_PATH}/start`);

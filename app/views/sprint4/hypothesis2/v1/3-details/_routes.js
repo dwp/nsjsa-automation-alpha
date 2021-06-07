@@ -6,7 +6,7 @@ const ABS_BASE_PATH = `/${BASE_PATH}`;
 const NEXT_PATH = '/sprint4/hypothesis2/v1/4-claim-start';
 
 router.get('/', function (req, res) {
-  res.redirect(`${ABS_BASE_PATH}/nino`);
+  res.redirect(`${ABS_BASE_PATH}/title`);
 })
 
 
