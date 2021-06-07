@@ -1,13 +1,14 @@
 const express = require('express');
 const router = express.Router();
 
-const BASE_PATH = 'sprint4/hypothesis1/v2/3-details';
+const BASE_PATH = 'sprint4/hypothesis2/v2/3-details';
 const ABS_BASE_PATH = `/${BASE_PATH}`;
-const NEXT_PATH = '/sprint4/hypothesis1/v2/4-claim-start';
+const NEXT_PATH = '/sprint4/hypothesis2/v2/4-claim-start';
 
 router.get('/', function (req, res) {
-  res.redirect(`${ABS_BASE_PATH}/check-info`);
+  res.redirect(`${ABS_BASE_PATH}/nino`);
 })
+
 
 router.get('/add-different-postal-address', function (req, res) {
   const answer = req.query.detailsAddDifferentPostalAddress;

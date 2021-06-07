@@ -3,7 +3,7 @@ const router = express.Router();
 
 const BASE_PATH = 'sprint4/hypothesis1/v1/4-claim-start';
 const ABS_BASE_PATH = `/${BASE_PATH}`;
-const NEXT_PATH = '/sprint4/hypothesis1/v1/5-other-benefits';
+const NEXT_PATH = '/sprint4/hypothesis1/v1/end';
 
 router.get('/', function (req, res) {
   res.redirect(`${ABS_BASE_PATH}/start-date`);

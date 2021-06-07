@@ -19,12 +19,13 @@
 
       <h1 class="govuk-heading-l">
         <span class="govuk-caption-xl">Personal details</span>
-        Do you have a phone number we can contact you on?
+        What is your contact number?
       </h1>
 
-      <form action="contact-phone" method="post">
+      <form action="check-info" method="get">
+          <p>We will use your mobile number to contact you about your application. 
+          We can use a landline if you do not have a mobile.</p>
 
-        {% set contactPhoneYes %}
           {{ govukInput({
             label: {
               text: "Enter a phone number"
@@ -34,33 +35,9 @@
             },
             classes: "govuk-input--width-20",
             id: "contact-telephone-number",
-            name: "contact-telephone-number",
+            name: "register-mobile-number",
             value: data["register-mobile-number"]
           }) }}
-        {% endset -%}
-
-        {{ govukRadios({
-          idPrefix: 'contact-telephone-number',
-          name: 'contact-telephone-number',
-          fieldset: {
-            legend: {
-              html: "<p>We will use your mobile number to contact you about your application. We can use a landline if you do not have a mobile.</p>
-              <p>Your claim could be delayed if you do not provide a phone number.</p>",
-              isPageHeading: false,
-              classes: "govuk-body-l"
-            }
-          },
-          items: [{
-            value: "yes",
-            text: "Yes",
-            conditional: {
-              html: contactPhoneYes
-            }
-          }, {
-            value: "no",
-            text: "No"
-          }]
-        }) }}
 
         {{ govukButton({
             text: "Continue"

@@ -27,4 +27,8 @@ router.use('/sprint4/hypothesis2/v1/dth/', require('./views/sprint4/hypothesis2/
 router.use('/sprint4/hypothesis2/v1/3-details/', require('./views/sprint4/hypothesis2/v1/3-details/_routes'))
 router.use('/sprint4/hypothesis2/v1/4-claim-start/', require('./views/sprint4/hypothesis2/v1/4-claim-start/_routes'))
 
+// H2 V2
+router.use('/sprint4/hypothesis2/v2/dth/', require('./views/sprint4/hypothesis2/v2/dth/_routes'))
+router.use('/sprint4/hypothesis2/v2/3-details/', require('./views/sprint4/hypothesis2/v2/3-details/_routes'))
+
 module.exports = router

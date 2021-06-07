@@ -1,4 +1,3 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
@@ -19,42 +18,42 @@
 
       <h1 class="govuk-heading-l">
         <span class="govuk-caption-xl">Personal details</span>
-        What is your email address?
+        Do you have an email we can contact you on?
       </h1>
 
-      <form action="check-info" method="get">
+      <form action="contact-do-you-have-an-email" method="post">
 
-
-        {% set contactPhoneYes %}
+        {% set contactEmailYes %}
           {{ govukInput({
             label: {
-              text: "Enter an email address"
+              text: "Enter your email address"
             },
             classes: "govuk-input--width-20",
             id: "contact-telephone-number",
             name: "contact-telephone-number"
           }) }}
         {% endset -%}
-        
-        {% call govukFieldset({}) %}
 
-        {{ govukInput({
-          label: {
-            text: "Your email address",
-            classes: "govuk-visually-hidden"
-          },
-          classes: "govuk-input--width-20",
-          id: "contact-email",
-          name: "register-email-address",
-          value: data["register-email-address"]
+        {{ govukRadios({
+          idPrefix: "contact-do-you-have-an-email",
+          name: "contactDoYouHaveAnEmail",
+          items: [{
+            value: "Yes",
+            text: "Yes",
+            checked: checked("contactDoYouHaveAnEmail", "Yes"),
+            conditional: {
+              html: contactEmailYes
+            }
+          }, {
+            value: "No",
+            text: "No",
+            checked: checked("contactDoYouHaveAnEmail", "No")
+          }]
         }) }}
-
-        {% endcall %}
 
         {{ govukButton({
-            text: "Continue"
+          text: "Continue"
         }) }}
-
       </form>
     </div>
   </div>

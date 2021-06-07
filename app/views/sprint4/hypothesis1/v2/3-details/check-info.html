@@ -31,7 +31,7 @@
         text: "Date of birth"
       },
       value: {
-        text: data['dob-day'] + "/" + data['dob-month'] + "/" + data['dob-year']
+        text: "23/03/1988"
       }
     },
     {
@@ -39,7 +39,10 @@
         text: "Address"
       },
       value: {
-        text: "32 Madeupis Road, Madeupistown. MD10 0UP"
+        html: data['address-line-1'] + "<br/>"
+        + data['address-line-2'] + "<br/>"
+        + data['address-town'] + "<br/>"
+        + data['postcode']
       },
       actions: {
         items: [
@@ -88,35 +91,10 @@
   ]
 }) }}
 
-      <form action="check-info" method="post">
-        
-        {{ govukRadios({
-          idPrefix: "use-info",
-          name: "use-info",
-          fieldset: {
-            legend: {
-              text: "Do you want us to use this information to contact you about your claim?",
-              isPageHeading: false,
-              classes: "govuk-fieldset__legend--m"
-            }
-          },
-          items: [
-            {
-              value: "yes",
-              text: "Yes"
-            },
-            {
-              value: "no",
-              text: "No"
-            }
-          ]
+      {{ govukButton({
+            text: "Continue",
+            href: "title"
         }) }}
-
-        {{ govukButton({
-            text: "Continue"
-        }) }}
-
-      </form>
     </div>
   </div>
 

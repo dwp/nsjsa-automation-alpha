@@ -34,6 +34,10 @@ module.exports = {
   "register-mobile-number": "07877 999000",
   
   "postcode": "MD10 0UP",
-  "nino": "QQ 12 34 56 C"
+  "nino": "QQ 12 34 56 C",
+
+  "address-line-1": "32 Madeupis Road",
+  "address-line-2": "Madevale",
+  "address-town": "Madeupistown"
 
 }
