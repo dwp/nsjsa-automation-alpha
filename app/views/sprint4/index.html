@@ -17,7 +17,7 @@
 
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-      <h2 class="govuk-heading-m">H1. How might we ask citizens to verify their identity without rekeying their information?</h2>
+      <h2 class="govuk-heading-m">H1. How might we persist data from DTH to NSJSA?</h2>
 
 {% set hypothesis1 %}
 
@@ -80,7 +80,7 @@
       <ul class="govuk-list">
           <li><a href='sprint4/hypothesis1/v1/1-eligibility/introduction'>Start from eligibility</a> – timing 4:40</li>
           <li><a href='sprint4/hypothesis1/v1/dth'>Jump to register trust account</a></li>
-          <li><a href='sprint4/hypothesis1/v1/3-details'>Jump to successful IDV</a></li>
+          <li><a href='sprint4/hypothesis1/v1/dth/success'>Jump to successful IDV</a></li>
       </ul>
 
       <h3 class="govuk-heading-s">V2. Full DTH after eligibility, successful IDV – NSJSA check data</h3>
@@ -89,8 +89,10 @@
 
       <ul class="govuk-list">
           <li><a href='sprint4/hypothesis1/v2/1-eligibility/introduction'>Start from eligibility</a> – timing 3:25</li>
+          <li><a href='sprint4/hypothesis1/v2/hand-off'>Jump to hand-off to DTH</a></li>
           <li><a href='sprint4/hypothesis1/v2/dth'>Jump to register trust account</a></li>
-          <li><a href='sprint4/hypothesis1/v2/3-details'>Jump to successful IDV</a></li>
+          <li><a href='sprint4/hypothesis1/v2/dth/success'>Jump to successful IDV</a></li>
+          <li><a href='sprint4/hypothesis1/v2/skipped'>Jump to skipped IDV</a></li>
       </ul>
 
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
@@ -131,7 +133,7 @@
                 text: "we will know this when"
             },
             value: {
-                text: "we test 2 versions of the DTH prototype, with and without registration"
+                text: "we test 2 versions of the DTH prototype, with and without registration and with a success and fail IDV"
             }
         },
         {
@@ -171,7 +173,7 @@
 
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-      <h2 class="govuk-heading-m">H3. How might we inform agents of a failed IDV?</h2>
+      <h2 class="govuk-heading-m">H3. How might we help agents identify claims needing bio checks?</h2>
 
 
 {% set hypothesis3 %}
@@ -183,7 +185,8 @@
                 text: "We believe that"
             },
             value: {
-                text: "informing agents of an identity not being verified online and flagging where a citizen might have a CIS mismatch"
+                text: "informing prcessors of an identity not being verified online and flagging 
+                where a citizen might have a CIS mismatch"
             }
         },
         {
@@ -191,7 +194,7 @@
                 text: "for"
             },
             value: {
-                text: "agents"
+                text: "Processors (service centre agents)"
             }
         },
         {
@@ -199,7 +202,7 @@
                 text: "will acheive"
             },
             value: {
-                text: "quicker identification of claims that need bio checks and faster processing of bio checks"
+                text: "quicker identification of claims that need manual intervention and faster processing of bio checks"
             }
         },
         {
@@ -207,7 +210,7 @@
                 text: "we will know this when"
             },
             value: {
-                text: "we test a few IDV drop-off scenarios to see if there are tasks agents no longer need to do"
+                text: "we test a few IDV drop-off scenarios to see if there are tasks processors no longer need to do"
             }
         },
         {
@@ -223,12 +226,12 @@
   {% endset %}
 
     {{ govukDetails({
-        summaryText: "View hypotheses 3",
+        summaryText: "View hypotheses 3", 
         html: hypothesis3
       }) }}
 
+      <p>Using agent prototype for this as it contained all required components and data.</p>
       <p><a href="https://newstylejsa-admin.herokuapp.com/future-team/idv">View prototype</a></p>
-      <p>Used agent prototype for this as it contained all required components and data.</p>
       <p>U: jsa P: jsa</p>
 
     </div>
