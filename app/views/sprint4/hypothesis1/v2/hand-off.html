@@ -1,0 +1,44 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Confirm your identity online to continue</h1>
+
+      <p>To get New Style Jobseeker's Allowance (JSA) we need to confirm your identity.</p>
+
+      <p>Confirming your identity online:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>checks thats it's really you making a claim</li>
+        <li>saves you time later</li>
+      </ul>
+
+      <p>It will not affect your claim if you try to confirm your identity online but find you cannot do this.</p>
+
+      {{ govukButton({
+          text: "Confirm your identity online",
+          href: "dth"
+      }) }}
+
+      {% set confirmIDHTML %}
+        <p>We'll contact you after you apply to confirm your identity.</p>
+        <p><a href="skipped?id=skipped">I want to confirm my identity another way</a></p>
+      {% endset %}
+
+      {{ govukDetails({
+        summaryText: "If you want to confirm you identity another way",
+        html: confirmIDHTML
+      }) }}
+
+
+    </div>
+  </div>
+
+{% endblock %}
