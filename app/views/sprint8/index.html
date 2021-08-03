@@ -1,0 +1,93 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      
+      <h1 class="govuk-heading-l">
+        Sprint #8 – Citizen ID&V (round 3)
+        <span class="govuk-caption-m">July 28 to August 10</span>
+      </h1>
+
+      <p>All of these journeys hand-off to the Dynamic Trust Hub screens after JSA application.</p>
+      <p>Reasons for hand-off at the end, risk of losing eligible applicants in DTH.</p>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">1. How might we prepare users to confirm thier ID online?</h2>
+
+{% set hypothesis1 %}
+
+  {{ govukSummaryList({
+    rows: [
+        {
+            key: {
+                text: "We believe that"
+            },
+            value: {
+                html: "<ul class='govuk-list govuk-list--bullet'>
+                <li>telling users they need to confirm thier ID to get JSA</li>
+                <li>telling users what documents they need to confirm thier ID</li>
+                </ul>"
+            }
+        },{
+            key: {
+                text: "will acheive"
+            },
+            value: {
+                html: "
+                <ul class='govuk-list govuk-list--bullet'>
+                  <li>Users who are prepared to confirm thier identity online</li>
+                </ul>
+                "
+            }
+        },{
+            key: {
+                text: "for"
+            },
+            value: {
+                text: "citizens"
+            }
+        },{
+            key: {
+                text: "validated by"
+            },
+            value: {
+                text: "user research and prototype testing"
+            }
+        }
+    ]
+    }) }}
+  {% endset %}
+
+      {{ govukDetails({
+        summaryText: "View hypotheses 1",
+        html: hypothesis1
+      }) }}
+      
+      <p class="govuk-body-l"><a href='sprint8/1/1-eligibility/introduction'>Start journey</a></p>
+
+      <h3 class="govuk-heading-s">Key screens</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href='sprint8/1/1-eligibility/eligible'>Eligibility outcome</a></li>
+        <li><a href='sprint8/1/hand-off'>DTH hand-off</a></li>
+        <li><a href='sprint8/1/confirmation?id=verified'>Successful IDV confirmation</a></li>
+        <li><a href='sprint8/1/confirmation?id=not-verified'>Unsuccessful IDV confirmation</a></li>
+        <li><a href='sprint8/1/check-answers'>Check answers</a></li>
+        <li><a href='sprint8/1/declaration'>Declaration</a></li>
+      </ul>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      {% include "includes/acronyms.html" %}
+    </div>
+  </div>
+
+{% endblock %}
