@@ -1,0 +1,82 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      
+      <h1 class="govuk-heading-xl">Confirm your identity</h1>
+
+      <h2 class="govuk-heading-m">You will need:</h2>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>an email address</li>
+        <li>a mobile phone number</li>
+      </ul>
+      <h3 class="govuk-heading-s">Plus 2 of the following:</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>P60 or payslips</li>
+        <li>a valid UK passport</li>
+        <li>tax credit information</li>
+      </ul>
+
+      <h2 class="govuk-heading-m">Confirm your identity so we can:</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>check it's you making a claim</li>
+        <li>protect you against fraud</li>
+        <li>save you time later</li>
+      </ul>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+      {% set confirmIDHTML %}
+        <p>You can still continue but we will need to contact you to confirm your identity. 
+        This may mean your application takes longer.</p>
+      {% endset %}
+      
+      <form action="hand-off" method="post">
+
+        {{ govukRadios({
+            idPrefix: 'dth',
+            name: 'confirmID',
+            fieldset: {
+              legend: {
+                text: "Can you confirm your identity?",
+                isPageHeading: false,
+                classes: "govuk-fieldset__legend--l"
+              }
+            },
+            items: [
+                {
+                    value: "yes",
+                    text: "Yes"
+                },
+                {
+                    value: "no",
+                    text: "No, not at this time",
+                    conditional: {
+                      html: confirmIDHTML
+                    }
+                }
+            ]
+          })
+        }}
+
+        {{ govukButton({
+            text: "Continue"
+        }) }}
+
+      </form>
+      
+      <p><a href="sign-in">I've already confirmed my identity</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}
