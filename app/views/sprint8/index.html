@@ -15,15 +15,16 @@
         <span class="govuk-caption-m">July 28 to August 10</span>
       </h1>
 
-      <p>All of these journeys hand-off to the Dynamic Trust Hub screens after JSA application.</p>
+      <p>Any journeys here hand-off to the Dynamic Trust Hub screens after JSA application.</p>
       <p>Reasons for hand-off at the end, risk of losing eligible applicants in DTH.</p>
 
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-      <h2 class="govuk-heading-m">1. How might we prepare users to confirm thier ID online?</h2>
+      <h2 class="govuk-heading-m">Sprint hypothesis</h2>
 
-{% set hypothesis1 %}
+{% set hypothesis %}
 
+<h2 class="govuk-heading-m">Hypothesis #1</h2>
   {{ govukSummaryList({
     rows: [
         {
@@ -31,28 +32,91 @@
                 text: "We believe that"
             },
             value: {
-                html: "<ul class='govuk-list govuk-list--bullet'>
-                <li>telling users they need to confirm thier ID to get JSA</li>
-                <li>telling users what documents they need to confirm thier ID</li>
-                </ul>"
-            }
-        },{
-            key: {
-                text: "will acheive"
-            },
-            value: {
-                html: "
-                <ul class='govuk-list govuk-list--bullet'>
-                  <li>Users who are prepared to confirm thier identity online</li>
-                </ul>
-                "
+                text: "giving information upfront about what is needed for the online IDV"
             }
         },{
             key: {
                 text: "for"
             },
             value: {
-                text: "citizens"
+                text: "claimants applying online for NSJSA"
+            }
+        },{
+            key: {
+                text: "will acheive"
+            },
+            value: {
+                text: "less users without necessary documents starting the online IDV"
+            }
+        },{
+            key: {
+                text: "validated by"
+            },
+            value: {
+                text: "user research and prototype testing"
+            }
+        }
+    ]
+    }) }}
+
+    <h2 class="govuk-heading-m">Hypothesis #2</h2>
+  {{ govukSummaryList({
+    rows: [
+        {
+            key: {
+                text: "We believe"
+            },
+            value: {
+                text: "omitting information about the Trust Hub registration"
+            }
+        },{
+            key: {
+                text: "for"
+            },
+            value: {
+                text: "claimants doing online IDV during their NSJSA application"
+            }
+        },{
+            key: {
+                text: "will acheive"
+            },
+            value: {
+                text: "in less claimant confusion"
+            }
+        },{
+            key: {
+                text: "validated by"
+            },
+            value: {
+                text: "user research and prototype testing"
+            }
+        }
+    ]
+    }) }}
+
+    <h2 class="govuk-heading-m">Hypothesis #3</h2>
+  {{ govukSummaryList({
+    rows: [
+        {
+            key: {
+                text: "We believe that"
+            },
+            value: {
+                text: "not informing about success or failure of online IDV"
+            }
+        },{
+            key: {
+                text: "for"
+            },
+            value: {
+                text: "claimants having completed the online IDV"
+            }
+        },{
+            key: {
+                text: "will acheive"
+            },
+            value: {
+                text: "less upset and worried users"
             }
         },{
             key: {
@@ -67,8 +131,8 @@
   {% endset %}
 
       {{ govukDetails({
-        summaryText: "View hypotheses 1",
-        html: hypothesis1
+        summaryText: "View sprint hypotheses",
+        html: hypothesis
       }) }}
       
       <p class="govuk-body-l"><a href='sprint8/1/1-eligibility/introduction'>Start journey</a></p>
